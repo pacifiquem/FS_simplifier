@@ -9,7 +9,7 @@ const FileSchema = new mongoose.Schema({
         maxLength: 30
     },
 
-    file_url: {
+    file_path: {
         type: String,
         required: true,
         unique: true, 
@@ -19,7 +19,13 @@ const FileSchema = new mongoose.Schema({
 
     downloads: {
         type: Number,
+        required: true,
         default: 0
+    },
+
+    password: {
+        type: String, 
+        required: false
     },
 
     sharedAt: {
