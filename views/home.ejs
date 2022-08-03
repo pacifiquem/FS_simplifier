@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>p-FileSharing | home</title>
+        <meta name="author" content="Pacifique Murangwa  - {pacifiquem@github.com}">
+        <meta name="discription" content="Website for secure filesharing">
+        <meta name="keywords" content="filesharing, secure filesharing, p-FileSharing">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="3600">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>FS.simplifier &nbsp; - &nbsp; Home</title>
     </head>
     <body>
-        <div>
-            <h1>welcome</h1>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <h1>FS.simplifier</h1>
+                </div>
+                <div class="nav">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Instructions</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="body">
+                <div class="form">
+                    <h1>Share Files with Password Protection</h1>
+                    <form action="#" enctype="moltipart/form-data">
+                        <div class="input-label-div password-div">
+                            <input type="password" placeholder="Enter Password" onfocus="displayLabel()" onblur="displayPlaceholder()" id="pass-input">
+                            <p style="display: none;" id="para-label">Password</p>
+                        </div>
+                        <div class="input-label-div">
+                            <label for="file-input">
+                                Upload File 
+                                <input type="file" id="file-input">
+                            </label>
+                        </div>
+                        <button type="submit">Share</button>
+                    </form>
+                </div>
+                <div class="discription">
+                    <h1>File Sharing simplifier</h1>
+                    <p>FS.simplifier allows you to share files and protect them with password.</p>
+                    <p>You can easily share url generated after uploading a file, whenever you want to send that file,</p>
+                    <p>after sharing the link people who know the password that protects that file can download it.</p>
+                </div>
+            </div>
+            <p>pacifiquem - All rights Reserved</p>
         </div>
     </body>
 </html>
