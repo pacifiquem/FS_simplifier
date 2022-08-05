@@ -9,9 +9,9 @@ body {
 }
 
 .container {
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
-    margin: 0 25vw;
+    margin: 0 20vw;
     position: relative;
     /* border: 1px solid black; */
 }
@@ -61,7 +61,7 @@ body {
 .nav a {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.22em;
+    font-size: 1.10em;
     color: rgb(39, 39, 39);
 }
 
@@ -87,9 +87,9 @@ body {
 }
 
 .form {
-    height: 60%;
+    height: 50%;
     position: relative;
-    top: 3em;
+    top: 3.3em;
     border: 1px solid rgb(139, 139, 139);
     border-radius: .4em;
     box-shadow: .5px 1px 1px 1px rgba(87, 87, 87, 0.671);
@@ -105,7 +105,7 @@ body {
 .form form {
     width: 90%;
     height: 60%;
-    margin: 1em auto;
+    margin: 2em auto;
     padding: 0 10em;
 }
 
@@ -114,7 +114,16 @@ body {
 }
 
 .input-label-div {
-    height: 35%;
+    height: 100%;
+    width: 50%;
+}
+
+.inputs {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
 }
 
 .input-label-div input {
@@ -122,16 +131,35 @@ body {
     padding: 1em;
     display: inline-block;
     width: 100%;
-    height: 65%;
+    height: 90%;
     outline: none;
     position: relative;
     border-radius: .3em;
     border: 1px solid rgb(39, 39, 39);
+    background-color: rgba(53, 53, 53, 0.07);
+}
+
+.input-label-div label {
+    display: inline-block;
+    width: 100%;
+    height: 90%;
+    margin-top: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: .2em;
+    border: 1px solid rgb(39, 39, 39);
+    cursor: pointer;
+    background-color: rgba(53, 53, 53, 0.07);
 }
 
 .password-div {
     position: relative;
-    height: 35%;
+    height: 100%;
+    margin-top: .19em;
 }
 
 .password-label-true {
@@ -155,7 +183,7 @@ body {
     }
 
     to {
-        background-color: rgb(245, 245, 245);
+        background-color: rgb(233, 233, 233);
         top: 0;
         left: 2em;
         display: inline-block !important;
@@ -163,36 +191,21 @@ body {
 
 }
 
-.input-label-div label {
-    display: inline-block;
-    width: 100%;
-    height: 70%;
-    margin-top: .5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
-    font-weight: 500;
-    border-radius: .2em;
-    border: 1px solid rgb(39, 39, 39);
-    cursor: pointer;
-}
 
 form button {
     font-size: 1.5em;
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
-    height: 25%;
+    height: 27%;
     cursor: pointer;
-    margin-top: .5em;
+    margin-top: 1.3em;
     border: .1px solid rgb(39, 39, 39);
     border-radius: .2em;
 }
 
 .discription {
-    margin-top: 8em;
+    margin-top: 9em;
 }
 
 .discription h1, p {
@@ -208,4 +221,19 @@ form button {
 .discription p {
     line-height: 1.7em;
     font-weight: 200;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 64vw;
+        margin: 0 16vw;
+    }
+
+    .nav ul {
+        gap: 8%;
+    }
+
+    .discription p {
+        line-height: 1.7em;
+    }
 }
