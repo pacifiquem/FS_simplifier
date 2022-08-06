@@ -226,7 +226,7 @@ form button {
 @media screen and (max-width: 1200px) {
     .container {
         width: 64vw;
-        margin: 0 16vw;
+        margin: 0 18vw;
     }
 
     .nav ul {
@@ -235,5 +235,19 @@ form button {
 
     .discription p {
         line-height: 1.7em;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .container {
+        width: 66vw;
+        margin: 0 17vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        width: 100vw;
+        margin: 0;
     }
 }

@@ -29,16 +29,18 @@
             <div class="body">
                 <div class="form">
                     <h1>Share Files with Password Protection</h1>
-                    <form action="#" enctype="moltipart/form-data">
-                        <div class="input-label-div password-div">
-                            <input type="password" placeholder="Enter Password" onfocus="displayLabel()" onblur="displayPlaceholder()" id="pass-input">
-                            <p style="display: none;" id="para-label">Password</p>
-                        </div>
-                        <div class="input-label-div">
-                            <label for="file-input">
-                                Upload File 
-                                <input type="file" id="file-input">
-                            </label>
+                    <form action="localhost:2300/file" enctype="multipart/form-data" method="post">
+                        <div class="inputs">
+                            <div class="input-label-div">
+                                <label for="file-input">
+                                    Upload File 
+                                    <input type="file" id="file-input">
+                                </label>
+                            </div>
+                            <div class="input-label-div password-div">
+                                <input type="password" placeholder="Enter Password" onfocus="displayLabel()" onblur="displayPlaceholder()" id="pass-input">
+                                <p style="display: none;" id="para-label">Password</p>
+                            </div>
                         </div>
                         <button type="submit">Share</button>
                     </form>
