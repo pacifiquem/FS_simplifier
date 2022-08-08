@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv').config({path: './config/.env'});
 const ejs = require('ejs');
+const mongoose = require('mongoose');
 
 const db_connection = require('./config/db.config');
 const file_router = require('./router/file.router');
@@ -11,7 +12,7 @@ db_connection();
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static('public'));
-app.use('/file', file_router);
+app.use('/', file_router);
 
 
 

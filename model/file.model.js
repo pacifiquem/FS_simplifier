@@ -1,26 +1,18 @@
 const mongoose = require('mongoose');
 
-const FileSchema = new mongoose.Schema({
-    filename: {
+const FileSchema = mongoose.Schema({
+    
+    fileOrginalName: {
         type: String,
         required: true,
-        unique: true, 
-        minLength: 2, 
-        maxLength: 30
+        minLength: 1, 
+        maxLength: 200
     },
 
     file_path: {
         type: String,
         required: true,
         unique: true, 
-        maxLength: 200,
-        match: '/^((http(s?)?):\/\/)?([wW]{3}\.)?[a-zA-Z0-9\-.]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/g'
-    },
-
-    downloads: {
-        type: Number,
-        required: true,
-        default: 0
     },
 
     password: {
@@ -28,9 +20,19 @@ const FileSchema = new mongoose.Schema({
         required: false
     },
 
+    identifier: {
+        type: String, 
+        required: true
+    },
+
     sharedAt: {
         type: Date,
         default: Date.now()
+    },
+    
+    downloadsCount: {
+        type: Number,
+        default: 0
     }
 });
 
