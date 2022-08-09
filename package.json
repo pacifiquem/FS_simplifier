@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "set NODE_ENV=production && node server.js"
+    "start": "node -e process.env.NODE_ENV = production  && node server.js"
   },
   "repository": {
     "type": "git",
