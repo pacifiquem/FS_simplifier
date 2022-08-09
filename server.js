@@ -4,7 +4,7 @@ const ejs = require('ejs');
 const mongoose = require('mongoose');
 
 const db_connection = require('./config/db.config');
-const file_router = require('./router/file.router');
+const file_router = require('./routes/file.router');
 const app = express();
 
 
