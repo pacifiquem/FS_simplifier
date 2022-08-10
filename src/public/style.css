@@ -197,7 +197,7 @@ form button {
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
-    height: 27%;
+    height: 27%; 
     cursor: pointer;
     margin-top: 1.3em;
     border: .1px solid rgb(39, 39, 39);
@@ -221,6 +221,49 @@ form button {
 .discription p {
     line-height: 1.7em;
     font-weight: 200;
+}
+
+/* styles for download page */
+
+
+#download-form {
+    height: 40%;
+    top: 4.3em;
+}
+
+#input-download-div {
+    height: 28.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+#input-download-div input {
+    height: 100%;
+    border: 1px solid black;
+    padding: 0 .5em;
+    border-radius: 0 !important;
+}
+
+#input-download-div button {
+    width: 35%;
+    height: 100%;
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+}
+
+.download-password-div {
+    margin-top: 0!important;
+}
+
+.password-input {
+    margin-top: 0 !important;
+}
+
+#download-discription {
+    margin-top: 12em;
 }
 
 @media screen and (max-width: 1200px) {
