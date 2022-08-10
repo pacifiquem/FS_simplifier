@@ -42,17 +42,25 @@ exports.uploadFile = async(req, res, next) => {
 
 exports.downloadFile = async (req, res, next) => {
 
-    const file = await FileSchema.findOne({
-        identifier: cryptoHash(req.params.identifier)
-    });
+    console.log(req);
 
-    if((file != null && file != undefined) && (file.file_path != null && file.file_path != undefined)) {
+    if(req.route.methods.post === true) {
 
-        res.download(file.file_path);
-        file.downloadsCount++;
-
-        await file.save();
-
+        const file = await FileSchema.findOne({
+            identifier: cryptoHash(req.params.identifier)
+        });
+    
+        if((file != null && file != undefined) && (file.file_path != null && file.file_path != undefined)) {
+    
+            res.download(file.file_path);
+            file.downloadsCount++;
+    
+            await file.save();
+    
+        }
+    }else {
+        console.log(req.route.methods);
+        res.render('downloadView');
     }
 
 };
