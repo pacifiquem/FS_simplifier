@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto');
+const bcrypt = require('bcrypt');
 const { FileSchema } = require('../model/file.model');
 const hash = require('../utils/hash.utils');
 const cryptoHash = require('../utils/cryptoHash.utils');
@@ -27,7 +28,7 @@ exports.uploadFile = async(req, res, next) => {
 
             res.status(200).json({
                 success: true, 
-                data: file.identifier
+                data: req.identifier
             });
 
         }
@@ -42,24 +43,28 @@ exports.uploadFile = async(req, res, next) => {
 
 exports.downloadFile = async (req, res, next) => {
 
-    console.log(req);
-
-    if(req.route.methods.post === true) {
+    if(req.body.password != undefined) {
 
         const file = await FileSchema.findOne({
             identifier: cryptoHash(req.params.identifier)
         });
     
-        if((file != null && file != undefined) && (file.file_path != null && file.file_path != undefined)) {
-    
-            res.download(file.file_path);
-            file.downloadsCount++;
-    
-            await file.save();
-    
+        if(file != undefined) {
+            if(await bcrypt.compare(req.body.password, file.password)) {
+
+                res.download(file.file_path);
+                file.downloadsCount++;
+                await file.save();
+
+            }else {
+                res.json({
+                    success: false,
+                    message: 'invalid password'
+                });
+            }
         }
+
     }else {
-        console.log(req.route.methods);
         res.render('downloadView');
     }
 
