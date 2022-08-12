@@ -10,7 +10,7 @@
         <script src="http://localhost:4220/script.js" defer></script>
         <title>FS.simplifier &nbsp; - &nbsp; Home</title>
     </head>
-    <body>
+    <body onload="addEvents()">
         <div class="container">
             <div class="header">
                 <div class="logo">
@@ -29,10 +29,10 @@
             <div class="body">
                 <div class="form" id="download-form">
                     <h1>Download Shared File</h1>
-                    <form method="post">
+                    <form action="#" method="post">
                         <div id="input-download-div">
                             <div class="input-label-div password-div download-password-div">
-                                <input type="password" name="password" placeholder="Enter Password" onfocus="displayLabel()" onblur="displayPlaceholder()" id="pass-input" class="password-input">
+                                <input type="password" name="password" placeholder="Enter Password" id="pass-input" class="password-input">
                                 <p style="display: none;" id="para-label">Password</p>
                             </div>
                             <button type="submit">Download</button>
