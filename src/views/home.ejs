@@ -10,7 +10,7 @@
         <script src="script.js" defer></script>
         <title>FS.simplifier &nbsp; - &nbsp; Home</title>
     </head>
-    <body>
+    <body onload="addEvents()">
         <div class="container">
             <div class="header">
                 <div class="logo">
@@ -38,7 +38,7 @@
                                 </label>
                             </div>
                             <div class="input-label-div password-div">
-                                <input type="password" name="password" placeholder="Enter Password" onfocus="displayLabel()" onblur="displayPlaceholder()" id="pass-input">
+                                <input type="password" name="password" placeholder="Enter Password" id="pass-input">
                                 <p style="display: none;" id="para-label">Password</p>
                             </div>
                         </div>
