@@ -306,7 +306,10 @@ form button {
     }
 
     .form {
-        height: 39vh;
+        height: 35vh;
+        width: 88%;
+        margin: 0 6%;
+
     }
 
     .form form {
@@ -320,9 +323,9 @@ form button {
     
     
     form button {
-        width: 90%;
-        height: 20%;
-        margin: 3.9em 5%; 
+        width: 88%;
+        margin: 3.7em 6%;
+        height: 20%; 
     }
 
 
@@ -331,9 +334,9 @@ form button {
     }
     
     .input-label-div {
-        width: 90%;
+        width: 88%;
+        margin: 1.1em 6%;
         height: 70%;
-        margin: 1em auto;
     }
     
     .nav {
@@ -341,7 +344,7 @@ form button {
     }
 
     .inputs {
-        margin-top: 4em;
+        margin-top: 3.4em;
         display: block;
     }
 }
