@@ -20,7 +20,7 @@ const displayLabel = () => {
 
 const displayPlaceholder = () => {
     const passInput = document.getElementById('pass-input');
-    passInput.setAttribute('placeholder', 'Enter password');
+    passInput.setAttribute('placeholder', 'Enter Password');
 
     const label = document.getElementById("para-label");
     label.setAttribute('style', 'display: none;');
