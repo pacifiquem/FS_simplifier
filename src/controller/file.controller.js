@@ -52,7 +52,7 @@ exports.downloadFile = async (req, res, next) => {
         if(file != undefined) {
             if(await bcrypt.compare(req.body.password, file.password)) {
 
-                res.download(file.file_path);
+                res.download(file.file_path, file.fileOrginalName);
                 file.downloadsCount++;
                 await file.save();
 
