@@ -5,7 +5,7 @@ const FileSchema = mongoose.Schema({
     fileOrginalName: {
         type: String,
         required: true,
-        minLength: 1, 
+        minLength: 1,
         maxLength: 200
     },
 
@@ -17,7 +17,9 @@ const FileSchema = mongoose.Schema({
 
     password: {
         type: String, 
-        required: false
+        required: true,
+        minLength: [6, "password must be atleast 6 characters long"],
+        maxLength: ['password can\'t be above 12 characters long'] 
     },
 
     identifier: {
