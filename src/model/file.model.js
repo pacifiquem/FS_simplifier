@@ -22,18 +22,20 @@ const FileSchema = mongoose.Schema({
 
     identifier: {
         type: String, 
-        required: true
+        required: true, 
+        unique: true
     },
 
-    sharedAt: {
-        type: Date,
-        default: Date.now()
-    },
-    
     downloadsCount: {
         type: Number,
         default: 0
+    },
+    
+    sharedAt: {
+        type: Date,
+        default: Date.now()
     }
+    
 });
 
 
