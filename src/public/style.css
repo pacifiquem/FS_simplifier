@@ -282,15 +282,66 @@ form button {
 }
 
 @media screen and (max-width: 1070px) {
+    body {
+        font-size: 14.9px;
+    }
     .container {
         width: 66vw;
         margin: 0 17vw;
     }
+
+    .form form {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
+    body {
+        font-size: 10px;
+    }
+
     .container {
-        width: 100vw;
-        margin: 0;
+        width: 96vw;
+        margin: 0 auto;
+    }
+
+    .form {
+        height: 39vh;
+    }
+
+    .form form {
+        height: 69%;
+        padding: 0;
+    }
+
+    form input {
+        border-radius: .18em;    
+    }
+    
+    
+    form button {
+        width: 90%;
+        height: 20%;
+        margin: 3.9em 5%; 
+    }
+
+
+    .password-label-true {
+        font-size: 1em;
+    }
+    
+    .input-label-div {
+        width: 90%;
+        height: 70%;
+        margin: 1em auto;
+    }
+    
+    .nav {
+        display: none;
+    }
+
+    .inputs {
+        margin-top: 4em;
+        display: block;
     }
 }
