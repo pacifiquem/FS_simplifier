@@ -6,6 +6,7 @@
 
 body {
     background-color: rgba(53, 53, 53, 0.07);
+    overflow-x: hidden;
 }
 
 .container {
@@ -273,14 +274,31 @@ form button {
     margin-top: 12em;
 }
 
+@media screen and ( max-width: 1460px ) {
+
+    .header {
+        gap: 27%;
+    }
+
+    .nav ul {
+        gap: 10%;
+    }
+}
+
+
+
 @media screen and (max-width: 1200px) {
     .container {
         width: 64vw;
         margin: 0 18vw;
     }
 
-    .nav ul {
-        gap: 8%;
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .nav {
+        display: none;
     }
 
     .discription p {
@@ -297,12 +315,25 @@ form button {
         margin: 0 17vw;
     }
 
+    .container>p {
+        left: 16.5em !important;
+    }
+
+    .form {
+        margin-top: 5em !important;
+    }
+
     .form form {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 550px) {
+
+    .logo {
+        display: none;
+    }
+
     body {
         font-size: 10px;
     }
@@ -312,11 +343,16 @@ form button {
         margin: 0 auto;
     }
 
+    .container>p {
+        position: absolute;
+        bottom: 0;
+        left: 10.5em;
+    }
+
     .form {
         height: 35vh;
         width: 88%;
-        margin: 0 6%;
-
+        margin: 2em 6%;
     }
 
     .form form {
@@ -363,7 +399,7 @@ form button {
 
     .discription {
         width: 88%;
-        margin: 11em auto;
+        margin: 9.3em auto;
     }
     
     .discription h1 {
