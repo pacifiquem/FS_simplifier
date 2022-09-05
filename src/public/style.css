@@ -285,7 +285,20 @@ form button {
     }
 }
 
+@media screen and (max-width: 1390px) {
 
+    .logo {
+        padding-top: 1.7em;
+    }
+
+    .logo h1 {
+        font-size: 1.4em;
+    }
+
+    .header {
+        gap: 22%;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .container {
@@ -293,13 +306,6 @@ form button {
         margin: 0 18vw;
     }
 
-    .logo h1 {
-        font-size: 2em;
-    }
-
-    .nav {
-        display: none;
-    }
 
     .discription p {
         line-height: 1.7em;
