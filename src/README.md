@@ -1,2 +1,3 @@
-# simple_file_sharing_website
-File sharing website
+## FS.simplifier
+
+FS.simplifier is a website that can help you to share files securely accross the Internet.
