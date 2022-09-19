@@ -34,15 +34,14 @@ exports.uploadFile = async(req, res, next) => {
         }
 
     } catch (error) {
-
         next(error);
-
     }
 
 };
 
 exports.downloadFile = async (req, res, next) => {
     try {
+
         if(req.body.password != undefined) {
 
             const file = await FileSchema.findOne({
@@ -67,7 +66,8 @@ exports.downloadFile = async (req, res, next) => {
         }else {
             res.render('downloadView');
         }
+
     } catch (error) {
-        console.log(error);
+        next(error);
     }
 };
