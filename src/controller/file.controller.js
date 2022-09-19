@@ -42,30 +42,32 @@ exports.uploadFile = async(req, res, next) => {
 };
 
 exports.downloadFile = async (req, res, next) => {
+    try {
+        if(req.body.password != undefined) {
 
-    if(req.body.password != undefined) {
-
-        const file = await FileSchema.findOne({
-            identifier: cryptoHash(req.params.identifier)
-        });
+            const file = await FileSchema.findOne({
+                identifier: cryptoHash(req.params.identifier)
+            });
+        
+            if(file != undefined) {
+                if(await bcrypt.compare(req.body.password, file.password)) {
     
-        if(file != undefined) {
-            if(await bcrypt.compare(req.body.password, file.password)) {
-
-                res.download(file.file_path, file.fileOrginalName);
-                file.downloadsCount++;
-                await file.save();
-
-            }else {
-                res.json({
-                    success: false,
-                    message: 'invalid password'
-                });
+                    res.download(file.file_path, file.fileOrginalName);
+                    file.downloadsCount++;
+                    await file.save();
+    
+                }else {
+                    res.json({
+                        success: false,
+                        message: 'invalid password'
+                    });
+                }
             }
+    
+        }else {
+            res.render('downloadView');
         }
-
-    }else {
-        res.render('downloadView');
+    } catch (error) {
+        console.log(error);
     }
-
 };
