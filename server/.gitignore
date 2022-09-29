@@ -105,5 +105,5 @@ dist
 
 /src/uploads
 /dist
-/src/node_modules
+/node_modules
 /src/config/.env
