@@ -17,7 +17,7 @@ const identifierGenerator = (req:Request, res:Response, next:NextFunction) => {
 
     const identifier = `${anotherPartArr}.fs.simplifier.${firstSecondsPartArr}`;
     req.body.identifier = identifier;
-
+    
     next();
 }
 
