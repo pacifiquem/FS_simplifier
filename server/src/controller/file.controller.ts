@@ -15,8 +15,11 @@ export const uploadFile = async(req:Request, res:Response, next:NextFunction) =>
     
     try {
 
-        if(req.file && req.body.password) {
-            
+        console.log(req.file);
+        console.log(req.body);
+
+        if(req.file !=undefined && req.body.password != undefined) {
+
             const { originalname, path } = req.file;
             const password = await hash(req.body.password);;
 
@@ -27,9 +30,24 @@ export const uploadFile = async(req:Request, res:Response, next:NextFunction) =>
                 identifier: cryptoHash(req.body.identifier)
             });
 
-            res.status(200).json({
-                success: true, 
-                data: req.body.identifier
+            if(file) {
+                
+                res.status(201).json({
+                    success: true, 
+                    data: req.body.identifier
+                });
+            }else {
+                res.status(422).json({
+                    success: false,
+                    message: 'unable to save file'
+                })
+            }
+
+        }else {
+
+            res.status(422).json({
+                success: false,
+                message: 'unable to save file'
             });
 
         }
