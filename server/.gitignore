@@ -103,7 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-/src/uploads
+/uploads
 /dist
 /node_modules
 /src/config/.env
+/package-lock.json
