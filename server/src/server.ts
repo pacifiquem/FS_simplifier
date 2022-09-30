@@ -1,13 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import mongoose from "mongoose";
 
 dotenv.config({
     path: `${__dirname}/config/.env`
 });
 
-const db_connection = require('./config/db.config');
-const file_router = require('./routes/file.router');
+import db_connection from './config/db.config';
+import file_router from './routes/file.router';
 const app:express.Application = express();
 
 
