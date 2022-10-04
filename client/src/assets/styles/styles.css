@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-heading-color: rgba(0, 0, 0, 0.7);
+    --main-text-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* styles for nav */
+.nav {
+    width: 65vw;
+    height: 10vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.nav h1 {
+    font: 700 xx-large arial;
+    color: var(--main-heading-color);
+    cursor: pointer;
+}
+
+.links {
+    width: 60%;
+    height: 100%;
+    padding-top: 1.5rem;
+}
+
+.links a:nth-child(1) {
+    margin-left: 12.2rem;
+}
+
+.links a {
+    margin: 0 0.7rem;
+    font: 600 larger arial;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
