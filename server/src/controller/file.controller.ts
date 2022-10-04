@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import { Request, Response, NextFunction } from "express";
 import { FileModel } from '../model/file.model';
+import { ContactModel } from '../model/contact.model';
 import hash from '../utils/hash.utils';
 import cryptoHash from '../utils/cryptoHash.utils';
 
@@ -92,7 +93,7 @@ export const downloadFile = async(req:Request, res:Response, next:NextFunction) 
 
 export const downloadCounter = async (req:Request, res:Response, next:NextFunction) => {
     try {
-        
+
         const identifier = req.params.identifier;
         const File = await FileModel.findOne({
             identifier: cryptoHash(identifier)
@@ -111,6 +112,38 @@ export const downloadCounter = async (req:Request, res:Response, next:NextFuncti
             });
         }
         
+    } catch (error) {
+        res.json({
+            success: false, 
+            message: "Internal error"
+        });
+    }
+
+}
+
+export const contactHandler = async (req:Request, res:Response, next:NextFunction) => {
+    
+    try {
+
+        const { name, email, message } = req.body;
+
+        const incomingMessage = await ContactModel.create({
+            name, email, message
+        });
+    
+        if(incomingMessage) {
+            res.status(201).json({
+                success: 'true', 
+                data: incomingMessage
+            });
+        }else {
+            res.status(422).json({
+                success: 'false', 
+                message: "unprocessable input"
+            });
+        }
+    
+
     } catch (error) {
         res.json({
             success: false, 
