@@ -88,3 +88,34 @@ export const downloadFile = async(req:Request, res:Response, next:NextFunction) 
         
     }
 };
+
+
+export const downloadCounter = async (req:Request, res:Response, next:NextFunction) => {
+    try {
+        
+        const identifier = req.params.identifier;
+        const File = await FileModel.findOne({
+            identifier: cryptoHash(identifier)
+        });
+    
+        if(File) {
+            res.json({
+                success: true, 
+                data: File.downloadsCount
+            });
+    
+        }else {
+            res.json({
+                success: false,
+                message: "File not found  | invalid identifier" 
+            });
+        }
+        
+    } catch (error) {
+        res.json({
+            success: false, 
+            message: "Internal error"
+        });
+    }
+
+}
