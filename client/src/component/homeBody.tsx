@@ -11,6 +11,7 @@ const BodyComponent:React.FC = () => {
     const [shortUrl, setShortUrl]:[string, React.Dispatch<React.SetStateAction<string>>] = useState('');
     const [showBody, setshowBody]:[{display: string;},React.Dispatch<React.SetStateAction<{display: string;}>>] = useState({display: 'block'});
     const [showSpinner, setShowSpinner]:[boolean, React.Dispatch<React.SetStateAction<boolean>>] = useState(false);
+    const [showPassinput, setShowPassinput] = useState(false);
     const [showError, setShowError] = useState({
         display: 'none'
     })
@@ -50,8 +51,12 @@ const BodyComponent:React.FC = () => {
                     <p id="homeerror" style={showError}>Please send a valid link</p>
                 </div>
                 <div className="input">
-                    <input type="password" required placeholder="Enter the password here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
-                    <button type="submit" onClick={submitUrl}>Upload</button>
+                    <div className="file-input">
+                        <input type="file" required />
+                        <button type="submit">Next</button>
+                    </div>
+                        <input type="password" style={{display: 'none'}} required placeholder="Enter the password here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
+                        <button type="submit" style={{display: 'none'}}>Submit</button>
                 </div>
             </div>
             {(shortUrl !== '' && showBody.display !== 'block') ?

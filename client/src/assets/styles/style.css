@@ -110,6 +110,15 @@ body {
     font-weight: 500;
 }
 
+.file-input {
+    background-color: red;
+    width: 100%;
+}
+
+.file-input button {
+    height: 100%;
+}
+
 #url-shower {
     height: 26%;
     width: 70%;
