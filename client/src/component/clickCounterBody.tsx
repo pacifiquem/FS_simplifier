@@ -53,8 +53,8 @@ const ClickCounterBody:React.FC = () => {
         <>
             <div className="clickCounterContainer">
                 <div className='clickCounterHeader'>
-                    <h1>URL Click Counter</h1>
-                    <p>Enter the URL to find out how many clicks it has received so far.</p>
+                    <h1>File Downloads Counter</h1>
+                    <p>Enter the URL to find out how many visits it has received so far.</p>
                     <p id='countererror' style={paraStyles}>Invalid link .</p>
                 </div>
                 <div className='clickCounterBody'>
@@ -67,7 +67,7 @@ const ClickCounterBody:React.FC = () => {
                     </div>
                     <p>{exampleUrl}</p>
                 </div>
-                <p>* Track the total hits of the shortened URL in real time, you do not have to register.</p>
+                <p>* Track the total downloads of the uploaded FILE in real time, you do not have to register.</p>
             </div>
         </>
     );
