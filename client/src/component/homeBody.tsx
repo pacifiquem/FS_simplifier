@@ -46,12 +46,12 @@ const BodyComponent:React.FC = () => {
         <div className="body">
             <div style={showBody}>
                 <div className="headers">
-                    <h1>Paste the URL to be shortened</h1>
+                    <h1>Upload File to FS.simplifier</h1>
                     <p id="homeerror" style={showError}>Please send a valid link</p>
                 </div>
                 <div className="input">
                     <input type="text" required placeholder="Enter the link here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
-                    <button type="submit" onClick={submitUrl}>Shorten URL</button>
+                    <button type="submit" onClick={submitUrl}>Upload</button>
                     </div>
                 </div>
                 {(shortUrl !== '' && showBody.display !== 'block') ?
@@ -59,8 +59,8 @@ const BodyComponent:React.FC = () => {
                     <div>
                         <UrlShower url={shortUrl} />
                         <div className="footer-contents">
-                            <p>ShortURL.at is a free tool to shorten a URL or reduce a link</p>
-                            <p>Use our URL Shortener to create a shortened link making it easy to remember</p>
+                            <p>FS.simplifier is a free tool and secure to share files </p>
+                            <p>Use our FS.simplifier to upload file and start sharing links generated instead .</p>
                         </div>
                     </div>
                 ):
@@ -68,19 +68,19 @@ const BodyComponent:React.FC = () => {
                     <div>
                         {showSpinner && <GrowSpinner />}
                         <div className="footer-contents" style={showBody}>
-                            <p>ShortURL.at is a free tool to shorten a URL or reduce a link</p>
-                            <p>Use our URL Shortener to create a shortened link making it easy to remember</p>
+                            <p>FS.simplifier is a free tool and secure to share files </p>
+                            <p>Use our FS.simplifier to upload file and start sharing links generated instead .</p>
                         </div>
                     </div>
                 )
                 }
             </div>
         <div className="discription">
-            <h2>Simple and fast URL shortener!</h2>
+            <h2>Faster File Sharing Simplifier</h2>
             <div className="paragraphs">
-                <p> ShortURL allows to reduce long links from Instagram, Facebook, YouTube, Twitter, Linked In and top sites on
-                    the Internet, just paste the long URL and click the Shorten URL button. On the next screen, copy the
-                    shortened URL and share it on websites, chat and e-mail. After shortening the URL,<a href="/urlcounter">check how many clicks it received</a>.
+                <p> FS.simplifier allows to upload file from computer, and generate url that can be share instead of file,
+                    Just upload file, add password protection and then click upload you will get a url that you can share instead of File.
+                    Generated URL can be shared on websites, chat and e-mail. By generated URL you can <a href="/urlcounter">check download counts it has</a>.
                 </p>
             </div>
         </div>

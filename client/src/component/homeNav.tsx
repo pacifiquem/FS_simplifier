@@ -7,7 +7,7 @@ const NavComponent:React.FC = () => {
     return(
     <>
         <div className="naver">
-            <h1>Short URL</h1>
+            <h1>FS.simplifier</h1>
         </div>
     </>
     );
