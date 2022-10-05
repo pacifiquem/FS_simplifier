@@ -22,7 +22,7 @@ const ClickCounterBody:React.FC = () => {
     const returnUrlCounter = () => {
         if(inputUrl !== '') {
 
-            axios.post('https://atshorturl.herokuapp.com/clickcounter', {
+            axios.post('', {
                 url: inputUrl
             }).then((response) => {
                 setStyles({

@@ -25,7 +25,7 @@ const ContactForm:React.FC = () => {
     const formHandler = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const response = await axios.post('https://atshorturl.herokuapp.com/contactus', {
+        const response = await axios.post('', {
             name, 
             email, 
             message
