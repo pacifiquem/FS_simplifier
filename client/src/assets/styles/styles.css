@@ -106,9 +106,16 @@ form {
     height: 80%;
     padding: 1rem;
     outline: none;
-    margin-left: 5vw;
+    margin-left: 16.5vw;
+    border-radius: var(--main-border-radius);
+    border: .05rem solid grey;
 }
 
 #pass-input{
     position: absolute;
+    font: 300 medium arial;
+    left: 18vw;
+    top: -1.2vh;
+    background-color: whitesmoke;
+    /* display: none; */
 }
