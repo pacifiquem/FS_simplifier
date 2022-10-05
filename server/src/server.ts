@@ -10,6 +10,7 @@ dotenv.config({
 
 import db_connection from './config/db.config';
 import file_router from './routes/file.router';
+import ExpressMongoSanitize from 'express-mongo-sanitize';
 const app:express.Application = express();
 
 
@@ -17,6 +18,7 @@ db_connection();
 
 app.use(cors());
 app.use(helmet());
+app.use(ExpressMongoSanitize);
 app.use(express.json());
 app.use(express. urlencoded({extended: true}));
 app.use('/', file_router);
