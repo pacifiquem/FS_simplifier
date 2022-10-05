@@ -1,15 +1,16 @@
-import React from 'react';
-import NavBar from '../components/navBar';
-import HomeForm from '../components/homeform';
+import React from "react";
+import NavComponent from '../component/homeNav';
+import BodyComponent from '../component/homeBody';
+import FooterComponent from '../component/homefooter';
 
-const homePage:React.FC = () => {
+const HomePage:React.FC = () => {
     return (
         <>
-            <NavBar />
-            <HomeForm />
+            <NavComponent />
+            <BodyComponent />
+            <FooterComponent />
         </>
     );
 }
 
-
-export default homePage;
+export default HomePage;
