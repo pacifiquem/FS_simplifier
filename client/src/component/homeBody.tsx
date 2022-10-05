@@ -50,31 +50,31 @@ const BodyComponent:React.FC = () => {
                     <p id="homeerror" style={showError}>Please send a valid link</p>
                 </div>
                 <div className="input">
-                    <input type="text" required placeholder="Enter the link here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
+                    <input type="password" required placeholder="Enter the password here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
                     <button type="submit" onClick={submitUrl}>Upload</button>
+                </div>
+            </div>
+            {(shortUrl !== '' && showBody.display !== 'block') ?
+            (
+                <div>
+                    <UrlShower url={shortUrl} />
+                    <div className="footer-contents">
+                        <p>FS.simplifier is a free tool and secure to share files </p>
+                        <p>Use our FS.simplifier to upload file and start sharing links generated instead .</p>
                     </div>
                 </div>
-                {(shortUrl !== '' && showBody.display !== 'block') ?
-                (
-                    <div>
-                        <UrlShower url={shortUrl} />
-                        <div className="footer-contents">
-                            <p>FS.simplifier is a free tool and secure to share files </p>
-                            <p>Use our FS.simplifier to upload file and start sharing links generated instead .</p>
-                        </div>
+            ):
+            (
+                <div>
+                    {showSpinner && <GrowSpinner />}
+                    <div className="footer-contents" style={showBody}>
+                        <p>FS.simplifier is a free tool and secure to share files </p>
+                        <p>Use our FS.simplifier to upload file and start sharing links generated instead .</p>
                     </div>
-                ):
-                (
-                    <div>
-                        {showSpinner && <GrowSpinner />}
-                        <div className="footer-contents" style={showBody}>
-                            <p>FS.simplifier is a free tool and secure to share files </p>
-                            <p>Use our FS.simplifier to upload file and start sharing links generated instead .</p>
-                        </div>
-                    </div>
-                )
-                }
-            </div>
+                </div>
+            )
+            }
+        </div>
         <div className="discription">
             <h2>Faster File Sharing Simplifier</h2>
             <div className="paragraphs">
