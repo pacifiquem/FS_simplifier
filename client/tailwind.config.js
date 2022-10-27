@@ -3,7 +3,11 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        libre: ['"Lato"', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   plugins: [],
 };
