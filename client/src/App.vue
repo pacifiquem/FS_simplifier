@@ -1,9 +1,10 @@
 <script setup lang="ts">
-// import { RouterLink, RouterView } from 'vue-router'
+// import { RouterLink, RouterView } from "vue-router";
+import NavBar from "./components/nav.vue";
 </script>
 
 <template>
-  <h1 class="text-red-400 font-Lato">Everything Is fine</h1>
+  <NavBar />
 </template>
 
 <style scoped></style>
