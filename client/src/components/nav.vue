@@ -6,18 +6,22 @@ export default {
 
 <template>
   <div
-    class="flex flex-row gap-[38%] px-16 py-2 bg-[#feffff] shadow-md w-[100vw]"
+    class="flex flex-row gap-[3%] items-center py-2 bg-[#feffff] shadow-md w-[100vw] h-[10vh] text-[#292929e3]"
   >
-    <img src="../assets/logo.png" alt="FS.simplifier LOGO" class="w-40" />
-    <div class="flex flex-row gap-8 p-4 text-xl">
-      <button class="hover:underline">Usage</button>
-      <button class="hover:underline">Download Counter</button>
-      <button class="hover:underline">Contact</button>
-      <button class="hover:underline">About</button>
-      <button class="ml-20 bg-[#1D1CE5] px-4 py-[0.38rem] rounded">
-        Donate
+    <img src="../assets/logo.png" alt="FS.simplifier LOGO" class="ml-[7.5%]" />
+    <div class="flex flex-row gap-12 p-4 text-[1.1rem]">
+      <button class="hover:text-[#3232e8ec] hover:text-[1.13rem]">
+        Download Counter
       </button>
+      <button class="hover:text-[#3232e8ec] hover:text-[1.13rem]">Usage</button>
+      <button class="hover:text-[#3232e8ec] hover:text-[1.13rem]">
+        Contact
+      </button>
+      <button class="hover:text-[#3232e8ec] hover:text-[1.13rem]">About</button>
     </div>
+    <button class="bg-[#3232e8ec] ml-[30%] rounded h-[60%] w-[7%]">
+      Donate
+    </button>
   </div>
 </template>
 
