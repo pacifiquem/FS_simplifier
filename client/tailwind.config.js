@@ -10,6 +10,9 @@ module.exports = {
     fontFamily: {
       Lato: ['"Lato"'],
     },
+    colors: {
+      textColor: "#292929e3",
+    },
   },
   plugins: [require("flowbite/plugin")],
 };
