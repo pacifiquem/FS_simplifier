@@ -13,6 +13,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.9.1",
+    "bootstrap-icons-vue": "^1.8.1",
+    "bootstrap-vue": "^2.23.1",
     "flowbite": "^1.5.3",
     "pinia": "^2.0.23",
     "vue": "^3.2.41",
