@@ -1,14 +1,10 @@
 <script setup lang="ts">
 // import { RouterLink, RouterView } from "vue-router";
-import NavBar from "./components/nav.vue";
-import formComponentVue from "./components/form-component.vue";
+import HomePage from "./views/home.vue";
 </script>
 
 <template>
-  <NavBar />
-  <div class="bg-[#f7f7f7]">
-    <formComponentVue />
-  </div>
+  <HomePage />
 </template>
 
 <style scoped></style>
