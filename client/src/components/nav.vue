@@ -1,27 +1,66 @@
 <script lang="ts">
 import UsageComponent from "./Usage.vue";
+import contactVue from "./contact.vue";
+import downloadcounterVue from "./downloadcounter.vue";
+import aboutVue from "./about.vue";
 export default {
   name: "NavBar",
   components: {
     UsageComponent: UsageComponent,
+    contactVue: contactVue,
+    downloadcounterVue: downloadcounterVue,
+    aboutVue: aboutVue,
   },
   data: function () {
     return {
-      lina: "notDisplayed",
+      usage: "notDisplayed",
+      about: "notDisplayed",
+      contact: "notDisplayed",
+      downloadcounter: "notDisplayed",
       below: "above",
     };
   },
   methods: {
-    toogleUsage() {
-      if (this.lina === "notDisplayed") {
-        this.lina = "displayed";
-      } else {
-        this.lina = "notDisplayed";
+    toogleDisplays(componentName: string) {
+      switch (componentName) {
+        case "usage":
+          if (this.usage === "notDisplayed") {
+            this.usage = "displayed";
+          } else {
+            this.usage = "notDisplayed";
+          }
+          break;
+
+        case "about":
+          if (this.about === "notDisplayed") {
+            this.about = "displayed";
+          } else {
+            this.about = "notDisplayed";
+          }
+          break;
+        case "contact":
+          if (this.contact === "notDisplayed") {
+            this.contact = "displayed";
+          } else {
+            this.contact = "notDisplayed";
+          }
+          break;
+        case "downloadcounter":
+          if (this.downloadcounter === "notDisplayed") {
+            this.downloadcounter = "displayed";
+          } else {
+            this.downloadcounter = "notDisplayed";
+          }
+          break;
       }
     },
+
     imagesToogleUsage() {
-      this.lina = "notDisplayed";
-    }
+      this.usage = "notDisplayed";
+      this.contact = "notDisplayed";
+      this.about = "notDisplayed";
+      this.downloadcounter = "notDisplayed";
+    },
   },
 };
 </script>
@@ -39,15 +78,26 @@ export default {
     <div class="flex flex-row gap-12 p-4 text-[1.1rem]">
       <button
         class="hover:text-[#3232e8ec] hover:text-[1.11rem]"
-        v-on:click="toogleUsage"
+        v-on:click="toogleDisplays('usage')"
       >
         Usage
       </button>
-      <button class="hover:text-[#3232e8ec] hover:text-[1.11rem]">About</button>
-      <button class="hover:text-[#3232e8ec] hover:text-[1.11rem]">
+      <button
+        class="hover:text-[#3232e8ec] hover:text-[1.11rem]"
+        v-on:click="toogleDisplays('about')"
+      >
+        About
+      </button>
+      <button
+        class="hover:text-[#3232e8ec] hover:text-[1.11rem]"
+        v-on:click="toogleDisplays('contact')"
+      >
         Contact
       </button>
-      <button class="hover:text-[#3232e8ec] hover:text-[1.11rem]">
+      <button
+        class="hover:text-[#3232e8ec] hover:text-[1.11rem]"
+        v-on:click="toogleDisplays('downloadcounter')"
+      >
         Download Counter
       </button>
     </div>
@@ -57,8 +107,17 @@ export default {
       Donate
     </button>
   </div>
-  <div :class="lina">
+  <div :class="usage">
     <UsageComponent />
+  </div>
+  <div :class="about">
+    <aboutVue />
+  </div>
+  <div :class="contact">
+    <contactVue />
+  </div>
+  <div :class="downloadcounter">
+    <downloadcounterVue />
   </div>
 </template>
 
