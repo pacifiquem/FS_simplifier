@@ -28,7 +28,7 @@ export default {
         </div>
         <div class="ml-1 w-[85%] h-[40%]">
           <textarea
-            class="w-[100%] h-[100%] border-[#2a2a2b78] border-solid border-2 rounded resize-none"
+            class="w-[100%] h-[100%] outline-[.5px] border-[#2a2a2b78] border-solid border-[1px] rounded resize-none"
           >
           </textarea>
         </div>

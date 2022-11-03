@@ -26,6 +26,9 @@ export default {
         case "usage":
           if (this.usage === "notDisplayed") {
             this.usage = "displayed";
+            this.contact = "notDisplayed";
+            this.downloadcounter = "notDisplayed";
+            this.about = "notDisplayed";
           } else {
             this.usage = "notDisplayed";
           }
@@ -34,6 +37,9 @@ export default {
         case "about":
           if (this.about === "notDisplayed") {
             this.about = "displayed";
+            this.usage = "notDisplayed";
+            this.contact = "notDisplayed";
+            this.downloadcounter = "notDisplayed";
           } else {
             this.about = "notDisplayed";
           }
@@ -41,6 +47,8 @@ export default {
         case "contact":
           if (this.contact === "notDisplayed") {
             this.contact = "displayed";
+            this.usage = "notDisplayed";
+            this.downloadcounter = "notDisplayed";
           } else {
             this.contact = "notDisplayed";
           }
@@ -48,6 +56,9 @@ export default {
         case "downloadcounter":
           if (this.downloadcounter === "notDisplayed") {
             this.downloadcounter = "displayed";
+            this.usage = "notDisplayed";
+            this.about = "notDisplayed";
+            this.contact = "notDisplayed";
           } else {
             this.downloadcounter = "notDisplayed";
           }
