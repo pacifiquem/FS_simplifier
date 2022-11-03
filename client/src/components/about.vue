@@ -27,17 +27,18 @@ export default {
       <div class="text-xl text-textColor ml-14">
         <p class="clear-left text-start mt-[26vh]">
           FS.simplifier is an online solution to many problems we face while
-          sharing files. Especially In order to reduce -
-        </p>
-        <p class="clear-right text-start">
-          cloud storage pricing. You can upload file to FS.simplifier, protect
-          it with password, and start to share generated link instead of file .
-        </p>
-        <p class="text-start mt-6">
-          This FS.simplifier was developed by Pacifique Murangwa who is a
-          fullstack developer based in Rwanda, It was inspired by the idea he
-          got when he was trying to send files by using Slack in free trial,
-          since he failed due to limited Storage he developed this tool.
+          sharing files. Especially In order to reduce cloud storage pricing.
+          You can upload file to FS.simplifier, protect it with password, and
+          start to share generated link instead of file . This FS.simplifier was
+          developed by Pacifique Murangwa who is a fullstack developer based in
+          Rwanda, It was inspired by the idea he got when he was trying to send
+          files by using Slack in free trial, since he failed due to limited
+          Storage he developed this tool. Reference
+          <a
+            href="https://github.com/pacifiquem/FS_simplifier"
+            class="text-[#0000ffda]"
+            >FS.simplifier's Github Repo .</a
+          >
         </p>
       </div>
     </div>
