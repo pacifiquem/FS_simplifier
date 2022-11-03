@@ -49,6 +49,7 @@ export default {
             this.contact = "displayed";
             this.usage = "notDisplayed";
             this.downloadcounter = "notDisplayed";
+            this.about = "notDisplayed";
           } else {
             this.contact = "notDisplayed";
           }
