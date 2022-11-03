@@ -1,10 +1,10 @@
 <script lang="ts">
-import CopyrightComponent from './copyright.vue';
+import CopyrightComponent from "./copyright.vue";
 export default {
   name: "DownloadCounterComponent",
   components: {
-    CopyrightComponent: CopyrightComponent
-  }
+    CopyrightComponent: CopyrightComponent,
+  },
 };
 </script>
 
