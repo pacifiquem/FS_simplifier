@@ -16,7 +16,7 @@ export default {
         <div class="ml-1 w-[85%] h-[12%] mt-8 mb-6">
           <input
             type="password"
-            class="w-[100%] h-[100%] outline-[.5px] border-[#2a2a2b78] border-solid border-[1px] rounded"
+            class="w-[100%] h-[100%] outline-[.5px] border-[#2a2a2b78] border-solid border-[1px] rounded px-8"
             name="password"
             id="passwordInput"
             placeholder="Enter Password"

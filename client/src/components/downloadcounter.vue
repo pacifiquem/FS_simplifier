@@ -35,7 +35,9 @@ export default {
           </button>
         </div>
       </form>
-      <h2 class="text-[#232323db] text-2xl ml-20">Download Counts : &nbsp; &nbsp; -- </h2>
+      <h2 class="text-[#232323db] text-2xl ml-20">
+        Download Counts : &nbsp; &nbsp; --
+      </h2>
     </div>
   </div>
   <CopyrightComponent />

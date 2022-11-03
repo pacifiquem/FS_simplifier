@@ -28,7 +28,7 @@ export default {
         </div>
         <div class="ml-1 w-[85%] h-[40%]">
           <textarea
-            class="w-[100%] h-[100%] outline-[.5px] border-[#2a2a2b78] border-solid border-[1px] rounded resize-none"
+            class="w-[100%] h-[100%] outline-[.5px] border-[#2a2a2b78] border-solid border-[1px] rounded resize-none px-8 py-8"
           >
           </textarea>
         </div>
@@ -44,4 +44,19 @@ export default {
   <CopyrightComponent />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+textarea::-webkit-scrollbar {
+  width: 0.4rem;
+}
+ 
+textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.147);
+}
+ 
+textarea::-webkit-scrollbar-thumb {
+  background-color: #3232e84b;
+  outline: 1px solid #3232e8ec;
+}
+
+</style>
