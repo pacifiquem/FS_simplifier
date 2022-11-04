@@ -23,12 +23,12 @@ export default {
           class="w-[30%] h-[90%] rounded shadow hover:shadow-lg hover:cursor-pointer"
         >
           <div
-            class="w-[100%] h-[50%] border-solid border-[#0000001c] border-[0.5px]"
+            class="w-[100%] h-[50%] border-solid border-[#0000001c] border-[0.5px] flex items-center justify-center"
           >
             <img
-              src="../assets/UsagePassword.jpg"
+              src="../assets/UsagePassword.png"
               alt="Password Usage Image"
-              style="width: 100%; height: 100%"
+              style="width: 55%; height: 80%"
             />
           </div>
           <div class="w-[100%] h-[50%] shadow-md">
@@ -47,12 +47,12 @@ export default {
           class="w-[30%] h-[90%] rounded shadow hover:shadow-lg hover:cursor-pointer"
         >
           <div
-            class="w-[100%] h-[50%] bg-white border-solid border-[#0000001c] border-[0.5px]"
+            class="w-[100%] h-[50%] bg-white border-solid border-[#0000001c] border-[0.5px] flex justify-center items-center"
           >
             <img
               src="../assets/UsageFiles.jpg"
               alt="Files Usage Image"
-              style="width: 100%; height: 100%"
+              style="width: 70%; height: 80%"
             />
           </div>
           <div class="w-[100%] h-[50%] shadow-md">
