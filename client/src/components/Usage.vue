@@ -23,7 +23,7 @@ export default {
           class="w-[30%] h-[90%] rounded shadow hover:shadow-lg hover:cursor-pointer"
         >
           <div
-            class="w-[100%] h-[50%] border-solid border-[#0000001c] border-[0.5px] flex items-center justify-center"
+            class="w-[100%] h-[50%] border-solid shadow-inner border-[#0000001c] border-[0.5px] flex items-center justify-center"
           >
             <img
               src="../assets/UsagePassword.png"
@@ -47,7 +47,7 @@ export default {
           class="w-[30%] h-[90%] rounded shadow hover:shadow-lg hover:cursor-pointer"
         >
           <div
-            class="w-[100%] h-[50%] bg-white border-solid border-[#0000001c] border-[0.5px] flex justify-center items-center"
+            class="w-[100%] h-[50%] bg-white border-solid shadow-inner border-[#0000001c] border-[0.5px] flex justify-center items-center"
           >
             <img
               src="../assets/UsageFiles.jpg"
@@ -70,7 +70,7 @@ export default {
           class="w-[30%] h-[90%] rounded shadow hover:shadow-lg hover:cursor-pointer"
         >
           <div
-            class="w-[100%] h-[50%] bg-white border-solid border-[#0000001c] border-[0.5px] flex justify-center items-center"
+            class="w-[100%] h-[50%] bg-white border-solid shadow-inner border-[#0000001c] border-[0.5px] flex justify-center items-center"
           >
             <img
               src="../assets/UsageLinks.png"
