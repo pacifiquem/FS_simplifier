@@ -24,7 +24,7 @@ export default {
       this.activeClass = !this.activeClass;
     },
     selectFileHandler() {
-      if(document.getElementById("File")?.current?.value != "") {
+      if(this.$refs?.value != "") {
         this.SelectedFileName = "file Selected";
         this.fileToogle = !this.fileToogle;
         this.activeClass = !this.activeClass;
