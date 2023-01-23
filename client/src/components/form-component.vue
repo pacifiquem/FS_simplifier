@@ -24,14 +24,14 @@ export default {
       this.activeClass = !this.activeClass;
     },
     selectFileHandler() {
-      if(this.$refs?.value != "") {
+      if (this.$refs?.value != "") {
         this.SelectedFileName = "file Selected";
         this.fileToogle = !this.fileToogle;
         this.activeClass = !this.activeClass;
-      }else {
+      } else {
         return;
       }
-    }
+    },
   },
 };
 </script>
@@ -43,6 +43,7 @@ export default {
         action="#"
         method="POST"
         class="w-[100%] h-[100%] p-6 flex flex-col items-center"
+        enctype="multipart/form-data"
       >
         <h2 class="text-[#232323db] text-3xl font-medium">Upload File</h2>
         <div class="ml-1 w-[85%] h-[12%] mt-8 mb-6">
